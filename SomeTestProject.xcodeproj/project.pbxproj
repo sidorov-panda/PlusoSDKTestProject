@@ -14,6 +14,8 @@
 		FA4A230C1B39A99C00BD2884 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4A230B1B39A99C00BD2884 /* Images.xcassets */; };
 		FA4A230F1B39A99C00BD2884 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4A230D1B39A99C00BD2884 /* LaunchScreen.xib */; };
 		FA4A231B1B39A99C00BD2884 /* SomeTestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4A231A1B39A99C00BD2884 /* SomeTestProjectTests.m */; };
+		FA5C61EE1B3AB01C00438BB4 /* PlusoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5C61ED1B3AB01C00438BB4 /* PlusoSDK.framework */; };
+		FA5C61EF1B3AB01C00438BB4 /* PlusoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5C61ED1B3AB01C00438BB4 /* PlusoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 			remoteInfo = SomeTestProject;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA4A23271B39A9B500BD2884 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA5C61EF1B3AB01C00438BB4 /* PlusoSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA4A22FB1B39A99C00BD2884 /* SomeTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +56,7 @@
 		FA4A23141B39A99C00BD2884 /* SomeTestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SomeTestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4A23191B39A99C00BD2884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4A231A1B39A99C00BD2884 /* SomeTestProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomeTestProjectTests.m; sourceTree = "<group>"; };
+		FA5C61ED1B3AB01C00438BB4 /* PlusoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlusoSDK.framework; path = ../PlusoSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5C61EE1B3AB01C00438BB4 /* PlusoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +114,7 @@
 		FA4A22FE1B39A99C00BD2884 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA5C61ED1B3AB01C00438BB4 /* PlusoSDK.framework */,
 				FA4A22FF1B39A99C00BD2884 /* Info.plist */,
 				FA4A23001B39A99C00BD2884 /* main.m */,
 			);
@@ -129,6 +148,7 @@
 				FA4A22F71B39A99C00BD2884 /* Sources */,
 				FA4A22F81B39A99C00BD2884 /* Frameworks */,
 				FA4A22F91B39A99C00BD2884 /* Resources */,
+				FA4A23271B39A9B500BD2884 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,7 +369,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SomeTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +384,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SomeTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +448,7 @@
 				FA4A23201B39A99C00BD2884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA4A23211B39A99C00BD2884 /* Build configuration list for PBXNativeTarget "SomeTestProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +457,7 @@
 				FA4A23231B39A99C00BD2884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
